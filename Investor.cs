@@ -32,14 +32,14 @@ namespace tpmodul13_103022300082
                 return;
             }
 
-            // Menggunakan 'is not' dan 'or' untuk memeriksa tipe dan nilai
-            if (tipeStock.Price is not 0 or >= 100000) // Setara dengan 'if (stock.State != 0 || stock.State >= 2)'
+            // Menggunakan 'is not' untuk memeriksa tipe dan nilai
+            if (tipeStock.Price >= 105.50m) // Setara dengan 'if (stock.State >= 105.50m)'
             {
                 Console.WriteLine($"{_name} received update: {tipeStock.Symbol} price is now {tipeStock.Price:C}");
             }
             else
             {
-                Console.WriteLine($"{_name} ignored update: {tipeStock.Price} price is now {tipeStock.Price:C}");
+                Console.WriteLine($"{_name} ignored update!");
             }
         }
     }
@@ -66,14 +66,14 @@ namespace tpmodul13_103022300082
                 return;
             }
 
-            // Menggunakan 'is' untuk memeriksa tipe dan nilai
-            if (tipeStock.Price is not 0) // Setara dengan 'if (stock.State != 0)'
+            // Menggunakan 'is not' dan 'or' untuk memeriksa tipe dan nilai
+            if (tipeStock.Price is not 0 or >= 10000) // Setara dengan 'if (stock.State != 0 || stock.State >= 10000)'
             {
                 Console.WriteLine($"{_name} received update: {tipeStock.Symbol} price is now {tipeStock.Price:C}");
             }
             else
             {
-                Console.WriteLine($"{_name} ignored update: {tipeStock.Price} price is now {tipeStock.Price:C}");
+                Console.WriteLine($"{_name} ignored update!");
             }
         }
     }

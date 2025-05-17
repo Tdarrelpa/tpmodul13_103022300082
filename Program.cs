@@ -15,12 +15,12 @@ public class Program
 
         // Memicu logika bisnis yang akan memberi tahu pengamat
         subject.SomeBusinessLogic();
-        subject.SomeBusinessLogic(); 
+        subject.SomeBusinessLogic();
 
         subject.Detach(observerB); // Menghapus pengamat B dari subjek
 
         subject.SomeBusinessLogic(); // Memicu logika bisnis lagi
-        
+
         // Mengimplementasikan pola Observer dalam aplikasi pemantauan saham di C#
         Stock sahamA = new("SahamKoperasiJaya", 100.00m); // Setara dengan 'new Stock("SahamKoperasiJaya", 100.00m);'
 
