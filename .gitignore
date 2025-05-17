@@ -1,0 +1,6 @@
+# Abaikan file-file ini saat akan melakukan 'git push'
+*.vs/
+bin/
+obj/
+tpmodul13_103022300082.sln
+tpmodul13_103022300082.csproj
