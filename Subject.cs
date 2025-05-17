@@ -27,7 +27,7 @@ namespace tpmodul13_103022300082
          * Dalam kehidupan sehari-hari, daftar pelanggan dapat disimpan secara lebih komprehensif 
          * (dikategorikan berdasarkan jenis kegiatan, dll.).
          */
-        private List<IObserver> _observers = new List<IObserver>();
+        private readonly List<IObserver> _observers = []; // Setara dengan 'new List<IObserver>()'
 
         // Metode pengelolaan langganan.
         public void Attach(IObserver observer)

@@ -19,6 +19,12 @@ namespace tpmodul13_103022300082
     {
         public void Update(ISubject subject)
         {
+            if (subject is not Subject)
+            {
+                Console.WriteLine("ConcreteObserverA: Invalid subject type.");
+                return;
+            }
+
             if ((subject as Subject).State < 3)
             {
                 Console.WriteLine("ConcreteObserverA: Reacted to the event.");
@@ -30,7 +36,12 @@ namespace tpmodul13_103022300082
     {
         public void Update(ISubject subject)
         {
-            if ((subject as Subject).State == 0 || (subject as Subject).State >= 2)
+            if (subject is not Subject) 
+            {
+                Console.WriteLine("ConcreteObserverB: Invalid subject type.");
+                return;
+            }
+            if ((subject as Subject).State is 0 or >= 2)
             {
                 Console.WriteLine("ConcreteObserverB: Reacted to the event.");
             }
